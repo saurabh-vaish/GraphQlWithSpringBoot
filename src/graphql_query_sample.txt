@@ -46,3 +46,40 @@
 #     vehicleLaunchDate
 #   }
 # }
+
+
+# mutation{
+#   saveVehicle(vehicle: {
+#     vehicleId: 3
+#     vehicleBrandName: "yamaha",
+#     vehicleLaunchDate: "1996-12-1",
+#     vehicleModeCode: "P",
+#     vehicleType: "Mobike"
+
+#   })
+#   {
+#     vehicleId
+#     vehicleType
+#     vehicleModeCode
+#     vehicleBrandName
+#     vehicleLaunchDate
+#   	company{
+#       companyId
+#     }
+#   }
+# }
+
+# mutation{
+#   updateVehicle(vehicle: {
+#     vehicleId: 3
+#     vehicleBrandName: "yamahafz",
+#     vehicleLaunchDate: "2016-12-1",
+#     vehicleModeCode: "P",
+#     vehicleType: "Mobike"
+#   })
+
+# }
+
+mutation delete{
+	deleteVehicle(id: 4)
+}

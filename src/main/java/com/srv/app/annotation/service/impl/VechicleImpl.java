@@ -44,8 +44,14 @@ public class VechicleImpl implements VehicleService {
 
     @Override
     public Integer deletevehicle(Integer vehicleId) {
-        repo.deleteById(vehicleId);
-        return vehicleId;
+        if(checkvehicle(vehicleId)==Boolean.TRUE)
+        {
+
+            repo.deleteById(vehicleId);
+            return vehicleId;
+        }else {
+            return null;
+        }
     }
 
     @Override

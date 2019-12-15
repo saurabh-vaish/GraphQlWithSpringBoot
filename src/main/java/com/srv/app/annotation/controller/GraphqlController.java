@@ -5,6 +5,7 @@ import graphql.ExecutionInput;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
+import graphql.servlet.SimpleGraphQLHttpServlet;
 import io.leangen.graphql.GraphQLSchemaGenerator;
 import io.leangen.graphql.metadata.strategy.query.AnnotatedResolverBuilder;
 import io.leangen.graphql.metadata.strategy.query.DefaultOperationBuilder;
@@ -26,7 +27,7 @@ import java.util.Map;
  */
 
 @RestController
-public class GraphqlController {
+public class GraphqlController{
 
 //    @Autowired
 //    private VehicleResolvers resolvers;
@@ -57,5 +58,13 @@ public class GraphqlController {
         return executionResult.toSpecification();
     }
 
+
+//    @Override
+//    protected List<GraphQLError> filterGraphQLErrors(List<GraphQLError> errors) {
+//        return errors.stream()
+//                .filter(e -> e instanceof ExceptionWhileDataFetching || super.isClientError(e))
+//                .map(e -> e instanceof ExceptionWhileDataFetching ? new SanitizedError((ExceptionWhileDataFetching) e) : e)
+//                .collect(Collectors.toList());
+//    }
 
 }
