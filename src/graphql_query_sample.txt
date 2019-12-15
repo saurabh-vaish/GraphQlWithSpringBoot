@@ -1,0 +1,48 @@
+# open localhost:8080/graphqli and run
+# for saving a vehicle
+# mutation{
+#   saveVehicle(vehicle: {
+#     vehicleId: 2
+#     vehicleBrandName: "maruti",
+#     vehicleLaunchDate: "1996-12-1",
+#     vehicleModeCode: "P",
+#     vehicleType: "Mobike"
+#     company: {
+#       companyId: 11
+#       companyName: "Suzuki"
+#       companyLocation: "India"
+#     }
+#   })
+#   {
+#     vehicleId
+#     vehicleType
+#     vehicleModeCode
+#     vehicleBrandName
+#     vehicleLaunchDate
+#   	company{
+#       companyId
+#     }
+#   }
+# }
+
+# for getting all the vehicles info
+
+# query all{
+#   Vehicles{
+#     vehicleId
+#     vehicleBrandName
+#     vehicleType
+#   }
+# }
+
+# for one vehicle
+
+# query one{
+#   Vehicle(id: 1){
+#     vehicleId
+#     vehicleBrandName
+#     vehicleType
+#     vehicleModeCode
+#     vehicleLaunchDate
+#   }
+# }
